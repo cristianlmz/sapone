@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'AsgaltRegular';
+    src: url(fonts/Asgalt-Regular.ttf) format('truetype');
+}
+
+body {
+    /* height: 100vh; */
+    height: 100%;
+    font-family: 'AsgaltRegular', 'arial', 'sans-serif' !important;
+    font-size: 2em !important;
+    /* background-color: black !important;
+    color: white !important; */
+    /* background-image: url('/assets/img/papiro_vertical.jpg'); */
+    background: url('/assets/img/papiro.jpeg');
+}
+
+h1 {
+    font-size: 3em !important;
+}

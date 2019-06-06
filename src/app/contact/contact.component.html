@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="text-center">Contact us</h1>
+
+    <form class="container" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Email address:</label>
+            <input type="email" class="form-control col-4" formControlName="userMail">
+            <div class="alert alert-danger col-4" *ngIf="formSubmitted && emailForm.controls.userMail.errors">
+                <div *ngIf="emailForm.controls.userMail.errors.required">Mail required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Your comments:</label>
+            <textarea class="form-control col-6" formControlName="userMessage"></textarea>
+            <div class="alert alert-danger col-6" *ngIf="formSubmitted && emailForm.controls.userMessage.errors">
+                <div *ngIf="emailForm.controls.userMessage.errors.required">Message required</div>
+            </div>
+        </div>
+        <input value="Submit" type="submit" class="btn btn-lg btn-primary">
+    </form>
+
+    <div class="alert alert-success mt-5 col-6" *ngIf="sendMailSuccess">
+        <div>We will send an email to <strong>{{ emailForm.controls.userMail.value }}</strong></div>
+        <div>With this message <strong>{{ emailForm.controls.userMessage.value }}</strong> </div>
+    </div>
+
+</div>

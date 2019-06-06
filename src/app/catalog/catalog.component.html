@@ -1,0 +1,166 @@
+<div class="container mb-5">
+    <h1 class="text-center">Check our awesome catalog!</h1>
+
+    <div *ngFor="let product of productsArray;let i = index">
+        <div class="row mb-2" *ngIf="i % 3 == 0">
+
+            <div class="col-md-4" *ngIf="i + 1 <= productsArray.length">
+                <div class="card shadow p-3 mb-2 rounded">
+                    <img src="{{ productsArray[i].ImgUrl }}" style="width:100%; height: 300px;">
+                    <div class="overlay overlay-text">
+                        <div class="h1">{{ productsArray[i].Name}}</div>
+                        <div>{{ productsArray[i].Description }}</div>
+                        <div>Precio $ {{ productsArray[i].Price.toFixed(2) }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" *ngIf="i + 2 <= productsArray.length">
+                <div class="card shadow p-3 mb-2 rounded">
+                    <img src="{{ productsArray[i+1].ImgUrl }}" style="width:100%; height: 300px;">
+                    <div class="overlay overlay-text">
+                        <div class="h1">{{ productsArray[i+1].Name}}</div>
+                        <div>{{ productsArray[i+1].Description }}</div>
+                        <div>Precio $ {{ productsArray[i+1].Price.toFixed(2) }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" *ngIf="i + 3 <= productsArray.length">
+                <div class="card shadow p-3 mb-2 rounded">
+                    <img src="{{ productsArray[i+2].ImgUrl }}" style="width:100%; height: 300px;">
+                    <div class="overlay overlay-text">
+                        <div class="h1">{{ productsArray[i+2].Name}}</div>
+                        <div>{{ productsArray[i+2].Description }}</div>
+                        <div>Precio $ {{ productsArray[i+2].Price.toFixed(2) }}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 
+<div class="container mb-5">
+    <h1 class="text-center">Check our awesome catalog!</h1>
+
+    <div class="row mb-2">
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-2 rounded">
+                <img src="assets/img_products/IMG_6823.JPG" style="width:100%; height: 300px;">
+                <div class="overlay overlay-text">
+                    <div class="h1">Jabón azul</div>
+                    <div>Este es un jabón azul degradado con otro color cafe más claro</div>
+                    <div>Precio $50.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-2 rounded">
+                <img src="assets/img_products/IMG_6829.JPG" style="width:100%; height: 300px;">
+                <div class="overlay overlay-text">
+                    <div class="h1">Jabón estrella</div>
+                    <div>Estos son unos divertidos jabones con forma de estrellita para toda la familia</div>
+                    <div>Precio $45.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-2 rounded">
+                <img src="assets/img_products/IMG_6852.JPG" alt="" style="width:100%; height: 300px;">
+                <div class="overlay overlay-text">
+                    <div class="h1">Jabón con jabón</div>
+                    <div>Este es un jabón con otro jabón más chiquito incrustado en su parte interna.</div>
+                    <div>Precio $45.00</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row mb-2">
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-2 rounded">
+                <img src="assets/img_products/IMG_7304.JPG" alt="" style=" width:100%; height: 300px;">
+                <div class="overlay overlay-text">
+                    <div class="h1">Cepillo bambú</div>
+                    <div>Este es un cepillo de dientes de bambu duradero muy bonito</div>
+                    <div>Precio $60.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-2 rounded">
+                <img src="assets/img_products/IMG_7330.JPG" alt="" style=" width:100%; height: 300px;">
+                <div class="overlay overlay-text">
+                    <div class="h1">Shampoo y acondicionador</div>
+                    <div>Este es un shampoo y un acondicionador de barra.</div>
+                    <div>Adiós a las botellas!</div>
+                    <div>Precio $50.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-2 rounded">
+                <img src="assets/img_products/oceano_rosa.png" alt="" style=" width:100%; height: 300px;">
+                <div class="overlay overlay-text">
+                    <div class="h1">Barra rosa</div>
+                    <div>Este es un shampoo y un acondicionador de barra.</div>
+                    <div>Este es un jabon bi-color degradado rosa.</div>
+                    <div>Precio $50.00</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row mb-2">
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-5 rounded">
+                <img src="assets/img_products/jabon_verde.jpeg" alt="" style=" width:100%; height: 300px;">
+                <div class="overlay overlay-text">
+                    <div class="h1">Jabón verde</div>
+                    <div>Descripcion del producto</div>
+                    <div>Precio $ 50.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-5 rounded">
+                <div style=" width:100%; height: 300px;"></div>
+                <div class="overlay overlay-text">
+                    <div>Descripcion del producto</div>
+                    <div>Precio $</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow p-3 mb-5 rounded">
+                <div style=" width:100%; height: 300px;"></div>
+                <div class="overlay overlay-text">
+                    <div>Descripcion del producto</div>
+                    <div>Precio $</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+-->
