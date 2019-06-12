@@ -12,7 +12,7 @@ body {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #515151;
+    background-color: #303030;
 }
 
 .overlay-text {
@@ -27,5 +27,5 @@ body {
 }
 
 .card:hover .overlay {
-    opacity: .6;
+    opacity: .75;
 }

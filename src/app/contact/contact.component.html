@@ -1,34 +1,35 @@
 <div class="container">
     <h1 class="text-center">Contact us</h1>
+    <div class="row d-flex justify-content-center">
 
-    <form class="container" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label>Name:</label>
-            <input type="text" class="form-control" formControlName="userName">
-            <div class="alert alert-sm alert-danger" *ngIf="formSubmitted && emailForm.controls.userName.errors">
-                <div *ngIf="emailForm.controls.userName.errors.required">Name required</div>
+        <form [formGroup]="emailForm" (ngSubmit)="onSubmit()" class="col-8">
+            <div class="form-group">
+                <input type="text" class="form-control " formControlName="userName" placeholder="Name">
+                <div class="alert alert-sm alert-danger " *ngIf="formSubmitted && emailForm.controls.userName.errors">
+                    <div *ngIf="emailForm.controls.userName.errors.required">Name required</div>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label>Email address:</label>
-            <input type="email" class="form-control" formControlName="userMail">
-            <div class="alert alert-danger" *ngIf="formSubmitted && emailForm.controls.userMail.errors">
-                <div *ngIf="emailForm.controls.userMail.errors.required">Mail required</div>
+            <div class="form-group">
+                <input type="email" class="form-control " formControlName="userMail" placeholder="Email">
+                <div class="alert alert-danger " *ngIf="formSubmitted && emailForm.controls.userMail.errors">
+                    <div *ngIf="emailForm.controls.userMail.errors.required">Mail required</div>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label>Your comments:</label>
-            <textarea class="form-control" formControlName="userMessage"></textarea>
-            <div class="alert alert-danger" *ngIf="formSubmitted && emailForm.controls.userMessage.errors">
-                <div *ngIf="emailForm.controls.userMessage.errors.required">Message required</div>
+            <div class="form-group">
+                <textarea class="form-control " formControlName="userMessage" placeholder="Your comments"></textarea>
+                <div class="alert alert-danger " *ngIf="formSubmitted && emailForm.controls.userMessage.errors">
+                    <div *ngIf="emailForm.controls.userMessage.errors.required">Message required</div>
+                </div>
             </div>
-        </div>
-        <input value="Submit" type="submit" class="btn btn-lg btn-gray">
-    </form>
+            <input value="Submit" type="submit" class="btn btn-lg btn-gray">
+        </form>
 
-    <div class="alert alert-success mt-5 col-6" *ngIf="sendMailSuccess">
-        <div>We will send an email to <strong>{{ emailForm.controls.userMail.value }}</strong></div>
-        <div>With this message <strong>{{ emailForm.controls.userMessage.value }}</strong> </div>
+        <div class="alert alert-success mt-5 col-6" *ngIf="sendMailSuccess">
+            <div>We will send an email to <strong>{{ emailForm.controls.userMail.value }}</strong></div>
+            <div>With this message <strong>{{ emailForm.controls.userMessage.value }}</strong> </div>
+        </div>
+
+
+
     </div>
-
 </div>

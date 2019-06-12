@@ -18,3 +18,11 @@ button {
     background-color: #515151;
     color: white;
 }
+
+.col-md-12 column {
+    text-align: center;
+}
+
+.col-md-12 column form {
+    display: inline-block;
+}
