@@ -5,17 +5,32 @@
     src: url(fonts/Asgalt-Regular.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'TwCenMT';
+    src: url(fonts/Tw-Cen-MT.ttf) format('truetype');
+}
+
 body {
     /* height: 100vh; */
     height: 100%;
     font-family: 'AsgaltRegular', 'arial', 'sans-serif' !important;
     font-size: 2em !important;
-    /* background-color: black !important;
-    color: white !important; */
-    /* background-image: url('/assets/img/papiro_vertical.jpg'); */
     background: url('/assets/img/papiro.jpeg');
 }
 
 h1 {
     font-size: 3em !important;
+}
+
+.product-header {
+    text-transform: uppercase;
+    font-family: 'AsgaltRegular';
+    font-weight: bold;
+}
+
+.product-body {
+    font-family: 'TwCenMT', 'AsgaltRegular';
+    font-size: 14pt;
+    font-weight: normal;
+    text-align: center;
 }
