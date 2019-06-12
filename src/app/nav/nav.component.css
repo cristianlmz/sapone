@@ -8,7 +8,7 @@
     position: fixed;
     height: 100%;
     overflow: auto;
-    background-color: black;
+    background-color: #515151;
 }
 
 
@@ -26,7 +26,7 @@
 
 .sidebar a:hover:not(.active) {
     background-color: white;
-    color: black;
+    color: #515151;
 }
 
 

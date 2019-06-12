@@ -1,3 +1,20 @@
-input, textarea, button {
+input,
+textarea,
+button {
     font-size: 20pt;
+}
+
+.btn-gray {
+    background-color: #515151;
+    border-color: black;
+    color: white;
+}
+
+.btn-gray:hover {
+    background-color: #252525;
+}
+
+.alert-danger {
+    background-color: #515151;
+    color: white;
 }
