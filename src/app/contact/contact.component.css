@@ -5,7 +5,7 @@ button {
 }
 
 .btn-gray {
-    background-color: #515151;
+    background-color: #303030;
     border-color: black;
     color: white;
 }
@@ -15,7 +15,7 @@ button {
 }
 
 .alert-danger {
-    background-color: #515151;
+    background-color: #303030;
     color: white;
 }
 

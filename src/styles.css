@@ -5,11 +5,6 @@
     src: url(fonts/Asgalt-Regular.ttf) format('truetype');
 }
 
-@font-face {
-    font-family: 'TwCenMT';
-    src: url(fonts/Tw-Cen-MT.ttf) format('truetype');
-}
-
 body {
     /* height: 100vh; */
     height: 100%;
@@ -23,14 +18,15 @@ h1 {
 }
 
 .product-header {
+    font-family: 'Abel', sans-serif;
     text-transform: uppercase;
-    font-family: 'AsgaltRegular';
     font-weight: bold;
     text-align: center;
+    font-size: 18pt;
 }
 
 .product-body {
-    font-family: 'TwCenMT', 'AsgaltRegular';
+    font-family: 'Lato', sans-serif;
     font-size: 14pt;
     font-weight: normal;
     text-align: center;
