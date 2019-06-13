@@ -5,9 +5,9 @@
         <div class="row mb-4" *ngIf="i % 4 == 0">
 
 
-            <div class="col-md-3" *ngIf="i + 1 <= productsArray.length" (click)="productDetail(productsArray[i].Id)">
+            <div class="col-xs-6 col-sm-4 col-md-3" *ngIf="i + 1 <= productsArray.length" (click)="productDetail(productsArray[i].Id)">
                 <div class="card shadow p-3 mb-2 rounded">
-                    <img src="{{ productsArray[i].ImgUrl }}" style="width:100%; height: 300px;">
+                    <img src="{{ productsArray[i].ImgUrl }}" class="img-fluid rounded float-left maxHeightDiv">
                     <div class="container overlay overlay-text">
                         <div class="product-header mt-3 mb-5">{{ productsArray[i].Name}}</div>
                         <div class="product-body">
@@ -18,9 +18,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3" *ngIf="i + 2 <= productsArray.length" (click)="productDetail(productsArray[i+1].Id)">
+            <div class="col-xs-6 col-sm-4 col-md-3" *ngIf="i + 2 <= productsArray.length" (click)="productDetail(productsArray[i+1].Id)">
                 <div class="card shadow p-3 mb-2 rounded">
-                    <img src="{{ productsArray[i+1].ImgUrl }}" style="width:100%; height: 300px;">
+                    <img src="{{ productsArray[i+1].ImgUrl }}" class="img-fluid rounded float-left maxHeightDiv">
                     <div class="container overlay overlay-text">
                         <div class="product-header mt-3 mb-5">{{ productsArray[i+1].Name}}</div>
                         <div class="product-body">
@@ -31,9 +31,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3" *ngIf="i + 3 <= productsArray.length" (click)="productDetail(productsArray[i+2].Id)">
+            <div class="col-xs-6 col-sm-4 col-md-3" *ngIf="i + 3 <= productsArray.length" (click)="productDetail(productsArray[i+2].Id)">
                 <div class="card shadow p-3 mb-2 rounded">
-                    <img src="{{ productsArray[i+2].ImgUrl }}" style="width:100%; height: 300px;">
+                    <img src="{{ productsArray[i+2].ImgUrl }}" class="img-fluid rounded float-left maxHeightDiv">
                     <div class="container overlay overlay-text">
                         <div class="product-header mt-3 mb-5">{{ productsArray[i+2].Name}}</div>
                         <div class="product-body">
@@ -44,9 +44,9 @@
                 </div>
             </div>
 
-            <div class="col-md-3" *ngIf="i + 4 <= productsArray.length" (click)="productDetail(productsArray[i+3].Id)">
+            <div class="col-xs-6 col-sm-4 col-md-3" *ngIf="i + 4 <= productsArray.length" (click)="productDetail(productsArray[i+3].Id)">
                 <div class="card shadow p-3 mb-2 rounded">
-                    <img src="{{ productsArray[i+3].ImgUrl }}" style="width:100%; height: 300px;">
+                    <img src="{{ productsArray[i+3].ImgUrl }}" class="img-fluid rounded float-left maxHeightDiv">
                     <div class="container overlay overlay-text">
                         <div class="product-header mt-3 mb-5">{{ productsArray[i+3].Name}}</div>
                         <div class="product-body">
