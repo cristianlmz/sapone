@@ -3,33 +3,26 @@ body {
     height: 100vh !important;
 }
 
+.home-footer {
+    background-color: white;
+    opacity: .75;
+}
+
 .slogan {
     background-image: url('/assets/img/slogan_circulo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 300px;
     height: 300px;
-    text-transform: uppercase;
-    font-family: 'AsgaltRegular';
-    background-color: white;
-    opacity: .8;
-    color: black;
 }
 
 .parallax {
-    margin: 0 !important;
-    padding: 0 !important;
-    color: white;
-    /* The image used */
-    /* background-image: url('/assets/img/green.jpeg'); */
     background-image: url('/assets/img/pozo.jpeg');
-    /* Set a specific height */
-    height: 100vh;
-    /* Create the parallax scrolling effect */
+    height: 97%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .vertical-center {

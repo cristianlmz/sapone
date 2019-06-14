@@ -1,32 +1,32 @@
 <div class="container">
-    <h1 class="text-center">Contact us</h1>
+    <h1 class="text-center">Ponte en contacto con nosotros</h1>
     <div class="row d-flex justify-content-center">
 
         <form [formGroup]="emailForm" (ngSubmit)="onSubmit()" class="col-8">
             <div class="form-group">
-                <input type="text" class="form-control " formControlName="userName" placeholder="Name">
+                <input type="text" class="form-control " formControlName="userName" placeholder="Nombre">
                 <div class="alert alert-sm alert-danger " *ngIf="formSubmitted && emailForm.controls.userName.errors">
-                    <div *ngIf="emailForm.controls.userName.errors.required">Name required</div>
+                    <div *ngIf="emailForm.controls.userName.errors.required">Queremos saber tu nombre!</div>
                 </div>
             </div>
             <div class="form-group">
                 <input type="email" class="form-control " formControlName="userMail" placeholder="Email">
                 <div class="alert alert-danger " *ngIf="formSubmitted && emailForm.controls.userMail.errors">
-                    <div *ngIf="emailForm.controls.userMail.errors.required">Mail required</div>
+                    <div *ngIf="emailForm.controls.userMail.errors.required">Proporcionanos tus comentarios</div>
                 </div>
             </div>
             <div class="form-group">
-                <textarea class="form-control " formControlName="userMessage" placeholder="Your comments"></textarea>
+                <textarea class="form-control " formControlName="userMessage" placeholder="Qué es lo que piensas?"></textarea>
                 <div class="alert alert-danger " *ngIf="formSubmitted && emailForm.controls.userMessage.errors">
-                    <div *ngIf="emailForm.controls.userMessage.errors.required">Message required</div>
+                    <div *ngIf="emailForm.controls.userMessage.errors.required">Mencionanos tus sugerencias e inquietudes</div>
                 </div>
             </div>
-            <input value="Submit" type="submit" class="btn btn-lg btn-gray">
+            <input value="Enviar" type="submit" class="btn btn-lg btn-gray">
         </form>
 
         <div class="alert alert-success mt-5 col-6" *ngIf="sendMailSuccess">
-            <div>We will send an email to <strong>{{ emailForm.controls.userMail.value }}</strong></div>
-            <div>With this message <strong>{{ emailForm.controls.userMessage.value }}</strong> </div>
+            <div>Enviaremos un correo a <strong>{{ emailForm.controls.userMail.value }}</strong></div>
+            <div>Con el siguiente mensaje <strong>{{ emailForm.controls.userMessage.value }}</strong> </div>
         </div>
 
 
