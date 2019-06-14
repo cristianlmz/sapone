@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ProductComponent } from './product/product.component';
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ProductComponent } from './product/product.component';
     ReactiveFormsModule,
     AngularFontAwesomeModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

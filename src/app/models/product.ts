@@ -4,4 +4,5 @@ export class Product {
     Description: string;
     Price: number;
     ImgUrl: string;
+    IsHighlighted: boolean;
 }
