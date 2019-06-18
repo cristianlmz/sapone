@@ -19,7 +19,7 @@ export class CatalogComponent implements OnInit {
    }
 
   productDetail(id: number) {
-    this.router.navigate(['/product'], { queryParams: { productId: id } });
+    // this.router.navigate(['/product'], { queryParams: { productId: id } });
   }
 
 }
